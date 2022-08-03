@@ -94,18 +94,6 @@ with st.expander('Totais por Fornecedor'):
     total_fornecedor= gasto_deputado.groupby(gasto_deputado['nomeFornecedor'])['valorLiquido'].sum()
     st.write(total_fornecedor.sort_values(ascending=False))
 
-def barPlot():
-        
-    import matplotlib.pyplot as plt 
-    color=['black', 'red', 'green', 'blue', 'cyan', 'white', 'gray', 'pink', 'brown', 'purple', 'darksalmon', 'gold', 'violet', 'navy']
-    fig = plt.figure(figsize=(14,8))
-    total_categoria.plot(kind='bar', color=color)
-    st.pyplot(fig)
-
-with st.expander('Grafico'):
-    barPlot()
-
-
 detalhe_deputado = detalhesDeputados(dados_dict[nome_deputado]['id'])
 
 list_compare = [0,1]
