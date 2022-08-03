@@ -95,6 +95,7 @@ with st.expander('Totais por Fornecedor'):
     st.write(total_fornecedor.sort_values(ascending=False))
 
 def barPlot():
+   import matplotlib.pyplot as plt 
     color=['black', 'red', 'green', 'blue', 'cyan', 'white', 'gray', 'pink', 'brown', 'purple', 'darksalmon', 'gold', 'violet', 'navy']
     fig = plt.figure(figsize=(14,8))
     total_categoria.plot(kind='bar', color=color)
